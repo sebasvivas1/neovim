@@ -7,19 +7,19 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  
+
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function ()
-		  vim.cmd('colorscheme rose-pine')
-	  end
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function ()
+      vim.cmd('colorscheme rose-pine')
+    end
   })
 
   use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -30,22 +30,22 @@ return require('packer').startup(function(use)
 
   -- Javascript doc generator
   use {
-	  'kkoomen/vim-doge',
-	  run = ':call doge#install()'
+    'kkoomen/vim-doge',
+    run = ':call doge#install()'
   }
 
 
   -- LSP
   use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v2.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {                                      -- Optional
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {                                      -- Optional
       'williamboman/mason.nvim',
       run = function()
-        pcall(vim.cmd, 'MasonUpdate')
+	pcall(vim.cmd, 'MasonUpdate')
       end,
     },
     {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -63,6 +63,18 @@ use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
 use('neovim/nvim-lspconfig')
 use('jose-elias-alvarez/null-ls.nvim')
 use('MunifTanjim/prettier.nvim')
+
+
+-- Lualine & Tabline
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+use 'joshdev15/nvim-tabline'
+
+
+-- Undotree
+use 'mbbill/undotree'
 
 end)
 

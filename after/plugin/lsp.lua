@@ -1,8 +1,11 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require("lsp-zero")
 
-lsp.on_attach(function(_, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
-end)
+lsp.preset("recommended")
+
+lsp.ensure_installed({
+  'tsserver',
+  'rust_analyzer',
+})
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {
@@ -15,8 +18,6 @@ lsp.configure('lua-language-server', {
     }
 })
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -44,7 +45,7 @@ lsp.set_preferences({
     }
 })
 
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
