@@ -76,6 +76,12 @@ use 'joshdev15/nvim-tabline'
 -- Undotree
 use 'mbbill/undotree'
 
+-- Autoclose tags
+use 'm4xshen/autoclose.nvim'
+
+-- Vim surround # Powerfull but hard to use plugin
+use 'tpope/vim-surround'
+
 end)
 
 
