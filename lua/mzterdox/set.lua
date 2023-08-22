@@ -23,5 +23,7 @@ set.splitright = true -- Vertical splits will automatically be to the right
 set.hlsearch = false
 set.incsearch = true -- Incremental search
 
-set.scrolloff = 8
+set.scrolloff = 8 -- Top margin betweeen the cursor and the top of the page
 
+set.mouse = ""
+set.mousehide = true

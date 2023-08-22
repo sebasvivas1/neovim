@@ -13,5 +13,7 @@ require("prettier").setup({
     "typescript",
     "typescriptreact",
     "yaml",
+    "prisma",
+    "lua",
   },
 })

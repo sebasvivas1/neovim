@@ -25,7 +25,9 @@ return require('packer').startup(function(use)
   use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
   use 'preservim/nerdtree'
-  --use 'github/copilot.vim'
+
+  use 'github/copilot.vim'
+
   use 'scrooloose/nerdcommenter'
 
   -- Javascript doc generator
@@ -70,7 +72,6 @@ use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
-use 'joshdev15/nvim-tabline'
 
 
 -- Undotree

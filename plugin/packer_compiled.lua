@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -133,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tabline"] = {
-    loaded = true,
-    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-tabline",
-    url = "https://github.com/joshdev15/nvim-tabline"
   },
   ["nvim-treesitter"] = {
     loaded = true,
